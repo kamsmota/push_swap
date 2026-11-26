@@ -1,0 +1,64 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_arrayjoin.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mafvicen <mafvicen@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/25 17:45:07 by mafvicen          #+#    #+#             */
+/*   Updated: 2026/11/25 18:09:55 by mafvicen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdlib.h>
+#include "push_swap.h"
+
+//i = nbr of the a array
+//n = nbr to add
+int	*ft_arrayjoin(int *a, int n, int i)
+{
+	int	*arr;
+	int	count;
+
+	if (!a)
+	{
+		a = malloc(sizeof(int));
+		if (!a)
+			return (NULL);
+	}
+	count = 0;
+	arr = malloc(sizeof(int) * (i + 1));
+	if (!arr)
+	{
+		free(a);
+		return (NULL);
+	}
+	while (count < i)
+	{
+		arr[count] = a[count];
+		count++;
+	}
+	arr[i] = n;
+	free(a);
+	return (arr);
+}
+
+/*#include <stdio.h>
+
+int	main()
+{
+	int	*a;
+
+	a = NULL;
+	a = ft_arrayjoin(a, 0, 0);
+	printf("%d\n", a[0]);
+	a = ft_arrayjoin(a, 1, 1);
+	printf("%d %d\n", a[0], a[1]);
+	a = ft_arrayjoin(a, 2, 2);
+	printf("%d %d %d\n", a[0], a[1], a[2]);
+	a = ft_arrayjoin(a, 3, 3);
+	printf("%d %d %d %d\n", a[0], a[1], a[2], a[3]);
+	a = ft_arrayjoin(a,4, 4);
+	printf("%d %d %d %d %d\n", a[0], a[1], a[2], a[3], a[4]);
+	free(a);
+}*/
