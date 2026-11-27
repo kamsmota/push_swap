@@ -6,7 +6,7 @@
 /*   By: kmota <kmota@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 17:45:07 by mafvicen          #+#    #+#             */
-/*   Updated: 2026/11/27 17:06:53 by kmota            ###   ########.fr       */
+/*   Updated: 2026/11/27 20:16:23 by kmota            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	*ft_create_array(char **argv)
 	{
 		if (ft_isvalidnum(argv[i]))
 		{
-			free (a);
+			free(a);
 			return (NULL);
 		}
 		a = ft_arrayjoin(a, ft_stonum(argv[i]), i);
@@ -62,6 +62,18 @@ int	*ft_create_array(char **argv)
 	}
 	return (a);
 }
+
+// criar ft_verify_array:
+// ver quantos argc existem
+// chegar ate o fim do argv[argc - 1]
+// verificar de dois em dois se ha numeros iguais
+// se houver, retorna 1 (erro)
+// continuar ate chegar em argv[1] ou argv[2] (depende da flag)
+// dps disso, criar o array em si (ou validar ele)
+
+//main deve ter a quantidade de numeros e o ponteiro (para o disorder) e p operacoes futuras
+
+
 /*#include <stdio.h>
 
 int	main()

@@ -2,9 +2,9 @@
 
 int	ft_stonum(char *str)
 {
-	int	i;
-	int	num;
-	int	signal;
+	int		i;
+	long	num;
+	int		signal;
 
 	i = 0;
 	num = 0;

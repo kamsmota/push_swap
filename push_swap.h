@@ -31,4 +31,10 @@ int		*ft_create_array(char **argv);
 double	ft_disorder(int *a, int n);
 int		ft_error(void);
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 #endif
