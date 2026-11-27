@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arrayjoin.c                                     :+:      :+:    :+:   */
+/*   ft_create_array.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mafvicen <mafvicen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kams <kams@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 17:45:07 by mafvicen          #+#    #+#             */
-/*   Updated: 2026/11/25 18:09:55 by mafvicen         ###   ########.fr       */
+/*   Updated: 2026/11/27 02:12:34 by kams             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	*ft_create_array(char **argv)
 			free (a);
 			return (NULL);
 		}
-		a = ft_arrayjoin(a, atoi(argv[i]), i);
+		a = ft_arrayjoin(a, ft_atoi(argv[i]), i);
 		i++;
 		ft_printa(a, i);
 	}
