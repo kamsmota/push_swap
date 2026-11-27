@@ -19,6 +19,8 @@ double	ft_disorder(int *a, int n)
 	int		i;
 	int		j;
 
+	if (n < 2)
+		return (0.0);
 	i = 0;
 	count = 0;
 	disorder = 0;
