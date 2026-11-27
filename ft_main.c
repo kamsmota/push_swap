@@ -40,7 +40,7 @@ int	main(int argc, char **argv)
 		return (ft_error());
 	b = malloc(sizeof(int) * argc - i);
 	if (!b)
-		return(ft_error);
+		return(ft_error());
 	free(a);
 	return (0);
 }

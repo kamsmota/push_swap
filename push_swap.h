@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <limits.h>
 
 void	ft_printa(int *a, int n);
 int		ft_swap(int *a1, int *a2);
@@ -22,8 +23,8 @@ int		ft_push(int *a1, int *b1);
 int		ft_rotate(int *a, int n);
 int		ft_reverse_rotate(int *a, int n);
 int		*ft_arrayjoin(int *a, int n, int i);
-int		ft_atoi(char *str);
-int		ft_isdigit(char *str);
+int		ft_stonum(char *str);
+int		ft_isvalidnum(char *str);
 int		ft_strcmp(char *str, char *cmp);
 int		ft_flag(char *str);
 int		*ft_create_array(char **argv);

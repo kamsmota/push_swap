@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int	ft_atoi(char *str)
+int	ft_stonum(char *str)
 {
 	int	i;
 	int	num;
@@ -25,7 +25,7 @@ int	ft_atoi(char *str)
 	return (num * signal);
 }
 
-int	ft_isdigit(char *str)
+int	ft_isvalidnum(char *str)
 {
 	int	i;
 

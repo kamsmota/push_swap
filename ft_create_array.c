@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_create_array.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kams <kams@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: kmota <kmota@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 17:45:07 by mafvicen          #+#    #+#             */
-/*   Updated: 2026/11/27 02:12:34 by kams             ###   ########.fr       */
+/*   Updated: 2026/11/27 17:06:53 by kmota            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,12 @@ int	*ft_create_array(char **argv)
 	i = 0;
 	while (argv[i])
 	{
-		if (ft_isdigit(argv[i]))
+		if (ft_isvalidnum(argv[i]))
 		{
 			free (a);
 			return (NULL);
 		}
-		a = ft_arrayjoin(a, ft_atoi(argv[i]), i);
+		a = ft_arrayjoin(a, ft_stonum(argv[i]), i);
 		i++;
 		ft_printa(a, i);
 	}
