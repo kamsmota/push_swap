@@ -18,6 +18,7 @@ int	main(int argc, char **argv)
 {
 	int	i;
 	int	*a;
+	int	*b;
 	int	flag;
 
 	if (argc < 2)
@@ -37,6 +38,9 @@ int	main(int argc, char **argv)
 	a = ft_create_array(argv + i);
 	if (!a)
 		return (ft_error());
+	b = malloc(sizeof(int) * argc - i);
+	if (!b)
+		return(ft_error);
 	free(a);
 	return (0);
 }
