@@ -28,5 +28,6 @@ int		ft_strcmp(char *str, char *cmp);
 int		ft_flag(char *str);
 int		*ft_create_array(char **argv);
 double	ft_disorder(int *a, int n);
+int		ft_error(void);
 
 #endif

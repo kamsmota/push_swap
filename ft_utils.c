@@ -44,3 +44,9 @@ int	ft_strcmp(char *str, char *cmp)
 		i++;
 	return (str[i]);
 }
+
+int	ft_error(void)
+{
+	write (2, "Error\n", 6);	
+	return (1);
+}

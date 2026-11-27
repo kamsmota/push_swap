@@ -20,14 +20,18 @@ int	main(int argc, char **argv)
 	int	*a;
 	int	flag;
 
+	if (argc < 2)
+		return (0);
 	a = NULL;
-	i = 0;
+	i = 1;
 	flag = ft_flag(argv[i]);
+	if (argc == 2 && flag)
+		return (ft_error());
 	if (flag != 0)
 		i++;
 	a = ft_create_array(argv + i);
 	if (!a)
-		write (1, "Error\n", 6);
-	return (flag + argc);
+		return (ft_error());
+	free(a);
+	return (0);
 }
-//something is wrong here and in the create array
