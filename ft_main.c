@@ -29,9 +29,16 @@ int	main(int argc, char **argv)
 		return (ft_error());
 	if (flag != 0)
 		i++;
+	if (ft_strcmp(argv[i], "--bench") == 0)
+	{
+		i++;
+		flag += 5;
+	}
 	a = ft_create_array(argv + i);
 	if (!a)
 		return (ft_error());
 	free(a);
 	return (0);
 }
+
+//if flag > 4 then there is bench
